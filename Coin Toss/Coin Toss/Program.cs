@@ -8,39 +8,59 @@ namespace Coin_Toss
         {
 
             //Name Variables
-            string answer, rString;
-            int H, T, rNum;
+            const string dev = "Anna";
+            string answer = "", finalA ="";
+            int rNum, convertednum = 0;
             Random R;
-          
-            //Ask user
+
+            //get user input
             Console.WriteLine("Heads or Tails? >>");
             answer = Console.ReadLine();
-    
+
+            //make answer Uppercase and 1st character
+            answer = answer.Substring(0, 1);
+            answer = answer.ToUpper();
+                
+            //convert answer to int
+            if (answer == "H")
+            {
+                convertednum = 1;
+            }
+            else if (answer == "T")
+            {
+                convertednum = 2;
+            }
+
+
             //Generate 1 or 2
             R = new Random();
             rNum = R.Next(1, 3);
+           
 
-            //convert 1 or 2 to string
+            //converts random number back to full words
             if (rNum == 1)
             {
-                rNum = Convert.ToString(rString);
+                finalA = "Heads";
             }
             else if (rNum == 2)
             {
-                rNum = Convert.ToString(rSting);
+                finalA = "Tails";
             }
+
 
             //tell user outcome
-            if (ans == rNum)
+            if (convertednum == rNum)
             {
-                Console.WriteLine($"{ans}, You guessed right");
+                Console.WriteLine($"{finalA}, You guessed right");
+            }
+            else if (convertednum != rNum)
+            {
+                Console.WriteLine($"{finalA}, Bad guess");
             }
 
-            else if (ans != rNum)
-            {
-                Console.WriteLine($"{ans}, Bad guess");
-            }
-          
+            //display developer name
+            Console.WriteLine($"{dev}");
+
           
         }
     }
