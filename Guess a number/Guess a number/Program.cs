@@ -35,7 +35,7 @@ namespace Guess_a_number
             Random R = new Random();
             int rNum = R.Next(lowNum, hiNum);
 
-            Console.WriteLine($"{rNum}");
+           // Console.WriteLine($"{rNum}");
 
             Console.WriteLine();
             Console.WriteLine("Okay, guess a number >>");
