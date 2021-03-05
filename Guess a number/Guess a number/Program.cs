@@ -6,10 +6,6 @@ namespace Guess_a_number
     {
         static void Main(string[] args)
         {
-            /*Create a new console application.   Generate a random number that the user will
-             define the minimum value and the maximum value, using the Random (Links to an external site.) class.
-            Prompt the user to guess the random number until they successfully guess it.*/
-
 
             Console.WriteLine("You will be guessing a random number. What do you want the lowest possible number to be? >>");
             string answer = Console.ReadLine();
