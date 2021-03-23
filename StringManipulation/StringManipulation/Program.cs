@@ -27,24 +27,23 @@ namespace StringManipulation
             }
            
 
-            string back = "";
+            string backwards = "";
             
             for (int i = answer.Length - 1; i >= 0; i--)
             {
-                back = back + answer[i];
+                backwards = backwards + answer[i];
             }
             
-            Console.WriteLine($"Your word backwards is '{back}'");
+            Console.WriteLine($"Your word backwards is '{backwards}'");
 
             Console.WriteLine();
             Console.WriteLine("What word do you want to replace it with? >>");
             string change = Console.ReadLine();
 
-            //new = new.Replace(answer, change);
-            string New = sentence.Replace(answer,change);
+            string newSentence = sentence.Replace(answer,change);
             
             Console.WriteLine();
-            Console.WriteLine($"{New}");
+            Console.WriteLine($"{newSentence}");
 
 
         }
