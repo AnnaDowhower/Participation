@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Question_2
 {
@@ -6,7 +7,7 @@ namespace Question_2
     {
         static void Main(string[] args)
         {
-            System.Collections.Generic.List<double> grades = new System.Collections.Generic.List<double>();
+            List<double> grades = new List<double>();
 
             string answer;
 
