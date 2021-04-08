@@ -100,7 +100,7 @@ namespace Functions_Calculator
                 }
                if (whatNext == 'C')
                 {
-                    Console.WriteLine("Thank you for your service. Goodbye!");
+                    Console.WriteLine("Thank you, Goodbye!");
                 }
 
             } while (whatNext == 'A');
