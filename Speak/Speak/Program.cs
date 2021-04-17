@@ -26,25 +26,25 @@ namespace Speak
         static string Speak(string animal)
         {
             string sound;
-            if (animal == "dog")
+            if (animal == "snake")
             {
-                sound = "woof";
+                sound = "Ssssss";
             }
-            else if (animal == "cat")
+            else if (animal == "cow")
             {
-                sound = "meow";
+                sound = "mooooo";
             }
             else if (animal == "fish")
             {
                 sound = "glub glub";
             }
-            else if (animal == "bird")
+            else if (animal == "fox")
             {
-                sound = "squawk";
+                sound = "wa-pa-pa-pa-pa-pa-pow";
             }
             else
             {
-                sound = "blibby";
+                sound = "bleh";
             }
             return sound;
         }
