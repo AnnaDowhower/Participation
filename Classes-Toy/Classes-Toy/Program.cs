@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Classes_Toy
 {
@@ -6,31 +7,36 @@ namespace Classes_Toy
     {
         static void Main(string[] args)
         {
+            List<Toy> toys = new List<Toy>();
+            
             //instance 1
-            Toy play = new Toy();
-            play.Manufacturer = "Lego Inc.";
-            play.Name = "Classic Creative Set";
-            play.Price = 12.96;
-            play.SetNote("These blocks will destroy your feet if stepped on.");
+            Toy toy1 = new Toy();
+            toy1.Manufacturer = "Lego Inc.";
+            toy1.Name = "Classic Creative Set";
+            toy1.Price = 12.96;
+            toy1.SetNote("These blocks will destroy your feet if stepped on.");
+            toys.Add(toy1);
 
-            Console.WriteLine($"Aisle : {play.GetAisle()}");
-            Console.WriteLine($"Toy name : {play.Name}");
-            Console.WriteLine($"Toy price : {play.Price.ToString("C")}");
-            Console.WriteLine($"Description : {play.GetNote()}");
+            Console.WriteLine($"Aisle : {toy1.GetAisle()}");
+            Console.WriteLine($"Toy name : {toy1.Name}");
+            Console.WriteLine($"Toy price : {toy1.Price.ToString("C")}");
+            Console.WriteLine($"Description : {toy1.GetNote()}");
+
 
             Console.WriteLine();
 
             //instance 2
-            play = new Toy();
-            play.Manufacturer = "Knickerbocker Toy Company";
-            play.Name = "Raggedy Ann Doll";
-            play.Price = 30.00;
-            play.SetNote("These dolls might be haunted");
+            Toy toy2 = new Toy();
+            toy2.Manufacturer = "Knickerbocker Toy Company";
+            toy2.Name = "Raggedy Ann Doll";
+            toy2.Price = 30.00;
+            toy2.SetNote("These dolls might be haunted");
+            toys.Add(toy2);
 
-            Console.WriteLine($"Aisle : {play.GetAisle()}");
-            Console.WriteLine($"Toy name : {play.Name}");
-            Console.WriteLine($"Toy price : {play.Price.ToString("C")}");
-            Console.WriteLine($"Description : {play.GetNote()}");
+            Console.WriteLine($"Aisle : {toy2.GetAisle()}");
+            Console.WriteLine($"Toy name : {toy2.Name}");
+            Console.WriteLine($"Toy price : {toy2.Price.ToString("C")}");
+            Console.WriteLine($"Description : {toy2.GetNote()}");
 
 
         }

@@ -11,7 +11,7 @@ namespace Classes_Toy
         public double Price { get; set; }
         private string Notes;
        
-        public Toy()
+        public Toy() //called a constructor bcz no variable type and same name as the class
         {
             Manufacturer = "";
             Name = "";
@@ -23,7 +23,11 @@ namespace Classes_Toy
         {
             Random R = new Random();
             int randomNum = R.Next(1, 25);
-            return $"{Manufacturer.ToUpper()[0]}{randomNum}";
+            return $"{Manufacturer.ToUpper()[0]}{randomNum}"; 
+            //say theres a variable called aisle that is the first uppercase letter of manufacturer.
+            //You could do aisle = "" + Manufacturer.ToUpper()[0];
+            //Or you could do aisle = Manufacturer.ToUpper()[0].ToString;
+            //Or could do aisle = "" + Manufacturer.ToUpper()[] + randomNum;
         }
 
         public string GetNote()
@@ -34,5 +38,13 @@ namespace Classes_Toy
         {
             Notes = details;
         }
-    }
+        //For Notes you could also add another method like:
+        /* public Toy(string notes) 
+            {
+                Manufacturer = "";
+                Name = "";
+                Price = 0;
+                Notes = notes;
+            }  */
+}
 }
