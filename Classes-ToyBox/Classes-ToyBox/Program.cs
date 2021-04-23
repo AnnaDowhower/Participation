@@ -9,8 +9,7 @@ namespace Classes_ToyBox
         static void Main(string[] args)
         {
             List<ToyBox> boxes = new List<ToyBox>();
-            List<Toy> toys = new List<Toy>();
-            
+
             string answer;
 
             do
@@ -26,7 +25,7 @@ namespace Classes_ToyBox
                 {
                     Toy toy = new Toy();
 
-                    Console.WriteLine("What is the name of the first toy in this box? >>");
+                    Console.WriteLine("What is the name of the toy in this box? >>");
                     toy.Name = Console.ReadLine();
                     Console.WriteLine("Who is its manufacturer? >>");
                     toy.Manufacturer = Console.ReadLine();
@@ -34,7 +33,7 @@ namespace Classes_ToyBox
                     toy.Price = Convert.ToDouble(Console.ReadLine());
                     Console.WriteLine("Toy note / description >>");
                     toy.SetNote(Console.ReadLine());
-                    toys.Add(toy);
+                    toyBox.Toys.Add(toy);
 
                     Console.WriteLine("Is there another toy in this box? >>");
                     answer = Console.ReadLine().ToLower();
@@ -45,31 +44,36 @@ namespace Classes_ToyBox
 
                 Console.WriteLine("Do you have another Toy Box? >>");
                 answer = Console.ReadLine().ToLower();
-         
+
             } while (answer[0] == 'y');
 
-            for (int i = 0; i < boxes.Count()-1; i++)
+            //outputs all toybox and toy info
+            foreach (var box in boxes)
             {
-                Console.WriteLine(boxes.ToString());
+                Console.WriteLine(box);
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("It holds the following items:");
+                Console.ForegroundColor = ConsoleColor.White;
 
-                for (int j = 0; j < toys.Count()-1; j++)
+                foreach (var toy in box.Toys)
                 {
-                    Console.WriteLine(toys.ToString());
+                    Console.WriteLine(toy);
+                    Console.WriteLine();
                 }
             }
-            
-            
-            /* foreach (var Box in boxes)
+
+            //generate random toy from each box
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("The following are a random toy from each toy box:");
+            foreach (var box in boxes)
             {
-                Console.WriteLine(Box.ToString());
-                Console.WriteLine("It holds the following items:");
-                
-                foreach (var Toy in toys)
-                {
-                    Console.WriteLine(Toy.ToString());
-                }
-            }*/
+                Console.WriteLine(box);
+                Toy r = box.GetRandomToy();
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine(r);
+                Console.WriteLine();
+            }
         }
     }
 }

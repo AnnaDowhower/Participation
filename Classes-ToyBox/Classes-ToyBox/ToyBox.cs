@@ -12,24 +12,22 @@ namespace Classes_ToyBox
 
         public override string ToString()
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
             return ($"{Owner}'s ToyBox is located at {Location}");
         }
 
         public ToyBox()
         {
-            //The constructor should set the List to a new instance of a list as well as set the
-            //defaults for the other properties/variables.
             Toys = new List<Toy>();
             Owner = "";
             Location = "";
         }
-        /*public Toy GetRandomToy()
+        public Toy GetRandomToy()
         {
-            //Gets a random toy from the collections, Toys, and returns it.
             int Amnt = Toys.Count;
             Random R = new Random();
-            int randomNum = R.Next(0, Amnt);
-
-        }*/
+            int randomNum = R.Next(Toys.Count);
+            return (Toys[randomNum]);
+        }
     }
 }
